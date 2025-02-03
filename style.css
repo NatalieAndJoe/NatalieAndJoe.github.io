@@ -114,3 +114,16 @@ body {
 .hidden {
     display: none;
 }
+
+.form {
+    margin: 5px;
+    border-radius: 10px;
+    width: 90%;
+    background-color: hwb(120 49% 27%);
+    color: black;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    border: 3px solid black;
+}

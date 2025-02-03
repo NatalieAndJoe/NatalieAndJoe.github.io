@@ -19,4 +19,24 @@ $(document).ready(function () {
         $("#plansForm").removeClass("hidden");
         $("#container").addClass("hidden");
     });
+
+    $("#plansback").click(function () {
+        $("#plansForm").addClass("hidden");
+        $("#container").removeClass("hidden");
+    });
+
+    $("#detailsback").click(function () {
+        $("#detailsForm").addClass("hidden");
+        $("#container").removeClass("hidden");
+    });
+
+    $("#rsvpback").click(function () {
+        $("#rsvpForm").addClass("hidden");
+        $("#container").removeClass("hidden");
+    });
+
+    $("#printback").click(function () {
+        $("#printForm").addClass("hidden");
+        $("#container").removeClass("hidden");
+    });
 });
