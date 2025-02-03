@@ -9,7 +9,13 @@ body {
     height: 100%;
     margin: 0;
     overflow: hidden;
-    background: linear-gradient(to bottom, hwb(120 49% 27%), black);
+    background-image: url("for wedding website.png");
+    background-size: cover;
+    /* Make sure the image covers the entire div */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: right center;
+    /* Change 'right', 'left', 'center', 'top', 'bottom' */
 }
 
 /* Ensure the container takes full height of the screen */
@@ -67,7 +73,7 @@ body {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .row {
         flex-direction: column;
     }
