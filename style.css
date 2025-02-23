@@ -1,25 +1,33 @@
-/* Make favicon circular */
+/* Favicon */
 link[rel="icon"] {
     border-radius: 50%;
 }
 
-/* Background gradient */
-html,
+/* General Body Styles */
 body {
-    height: 100%;
     margin: 0;
+    height: 100vh;
     overflow: hidden;
-    background-image: url("for wedding website.png");
-    background-size: cover;
-    /* Make sure the image covers the entire div */
-    background-repeat: no-repeat;
-    /* Prevent the image from repeating */
-    background-position: right center;
-    /* Change 'right', 'left', 'center', 'top', 'bottom' */
+    position: relative;
+    font-family: 'CustomFont';
 }
 
-/* Ensure the container takes full height of the screen */
+body::before {
+    content: "";
+    background: url("for wedding website.png") no-repeat right center;
+    background-size: cover;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Container */
 .container {
+    padding: 8%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -28,12 +36,17 @@ body {
     text-align: center;
 }
 
-/* Image and button layout adjustments */
-.row {
-    width: 100%;
-    height: 100%;
+/* Welcome Section */
+.welcome {
+    padding-top: 10px;
+    border-radius: 20px;
+    width: 90%;
+    background-color: rgba(245, 229, 209, 1);
+    color: black;
+    border: 3px solid black;
 }
 
+/* Image Container */
 .img-container {
     flex: 1;
     display: flex;
@@ -41,14 +54,13 @@ body {
     align-items: center;
 }
 
-/* Adding a cute border to the image */
 .img-container img {
     width: 70%;
     border: 5px solid black;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px hwb(120 49% 27%);
 }
 
+/* Buttons and Forms */
 .buttons-container {
     flex: 1;
     display: flex;
@@ -57,18 +69,48 @@ body {
     flex-direction: column;
 }
 
-/* Responsive adjustments */
+.button-div {
+    margin: 5px;
+    border-radius: 50px;
+    width: 90%;
+    height: 15%;
+    background-color: rgba(245, 229, 209, 1);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-align: center;
+    border: 3px solid black;
+}
+
+.button-div:hover {
+    background-color: #dbc5a4;
+}
+
+.hidden {
+    display: none;
+}
+
+.form {
+    padding-top: 10px;
+    border-radius: 10px;
+    width: 90%;
+    background-color: rgba(245, 229, 209, 1);
+    color: black;
+    text-align: center;
+    border: 3px solid black;
+    padding: 15px;
+}
+
+/* Media Queries */
 @media (min-width: 768px) {
     .row {
         flex-direction: row;
     }
 
-    .buttons-container {
-        flex-direction: column;
-    }
-
     .img-container {
-        flex: 1;
         padding-right: 20px;
     }
 }
@@ -88,48 +130,10 @@ body {
     }
 }
 
-.buttons-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.button-div {
-    margin: 5px;
-    border-radius: 50px;
-    width: 90%;
-    height: 20%;
-    background-color: hwb(120 49% 27%);
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    cursor: pointer;
-    text-align: center;
-    border: 3px solid black;
-}
-
-.button-div:hover {
-    background-color: #357142;
-    color: white;
-}
-
-.hidden {
-    display: none;
-}
-
-.form {
-    margin: 5px;
-    border-radius: 10px;
-    width: 90%;
-    background-color: hwb(120 49% 27%);
-    color: black;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    text-align: center;
-    border: 3px solid black;
+/* Custom Font */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('font/Raleway-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
